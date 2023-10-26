@@ -1,7 +1,7 @@
 /* 
 Name: Quinton Fesq 
 Date: October 26 2023
-File: P9-3
+File: P9-3 
  
 Description: A run is a sequence of adjacent repeated values. Using an array,
 write a program that generates a sequence of 20 random six-sided 
