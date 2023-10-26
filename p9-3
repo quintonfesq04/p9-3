@@ -1,0 +1,70 @@
+/*
+Name: Quinton Fesq
+Date: October 26 2023
+File: P9-3
+ 
+Description: A run is a sequence of adjacent repeated values. Using an array,
+write a program that generates a sequence of 20 random six-sided
+die tosses, determines whether or not a run is present and prints
+out this information, andprints all the die values, marking the runs
+by including them in parentheses
+*/
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+void displayRun(int values[], int size);
+bool hasRun(int values[], int size);
+
+int main() {
+    srand(time(0));
+    int const size = 20;
+    int values[size];
+
+    for (int size = 0; size < 20; size++) {
+        values[size] = rand() % 9 + 1;
+    }
+
+    if (hasRun(values, size) == true) {
+        cout << "has run: ";
+    }
+    else {
+        cout << "no run: ";
+    }
+    for (int n = 0; n < 20; n++) {
+    if (hasRun(values, size) == true) {
+        cout << values[n] << " ";
+    }
+    else {
+        cout << values[n] << " ";
+    }
+}
+
+}
+
+void displayRun(int values[], int size) {
+    while (true) {
+        for (int size = 0; size < 20; size++) {
+            if (values[size] == values[size + 1]) {
+                cout << "(" << values[size];
+            }
+                if (values[size] != values[size + 1]) {
+                    cout << values[size] << ")";
+                }
+        }
+    }
+}
+
+bool hasRun(int values[], int size) {
+    int x = 0;
+
+    for (int i = 0; i < size - 1; i++) {
+        if (values[i] == values[i + 1]) {
+            return true;
+        }
+    }
+    return false;
+}
