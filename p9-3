@@ -4,7 +4,7 @@ Date: October 26 2023
 File: P9-3
  
 Description: A run is a sequence of adjacent repeated values. Using an array,
-write a program that generates a sequence of 20 random six-sided
+write a program that generates a sequence of 20 random six-sided 
 die tosses, determines whether or not a run is present and prints
 out this information, andprints all the die values, marking the runs
 by including them in parentheses
